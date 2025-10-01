@@ -1,0 +1,16 @@
+<form (ngSubmit)="guardarVenta()">
+  <label>Cliente:</label>
+  <select [(ngModel)]="venta.cliente" name="cliente" required>
+    <option *ngFor="let c of clientes" [ngValue]="c">{{ c.nombre }}</option>
+  </select>
+
+  <label>Auto:</label>
+  <select [(ngModel)]="venta.auto" name="auto" required>
+    <option *ngFor="let a of autos" [ngValue]="a">{{ a.marca }} {{ a.modelo }}</option>
+  </select>
+
+  <label>Fecha:</label>
+  <input type="date" [(ngModel)]="venta.fecha" name="fecha" required>
+
+  <button type="submit">Registrar Venta</button>
+</form>

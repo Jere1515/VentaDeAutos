@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Cliente</th>
+    <th>Auto</th>
+    <th>Fecha</th>
+  </tr>
+  <tr *ngFor="let venta of ventas">
+    <td>{{ venta.id }}</td>
+    <td>{{ venta.cliente.nombre }}</td>
+    <td>{{ venta.auto.marca }} {{ venta.auto.modelo }}</td>
+    <td>{{ venta.fecha }}</td>
+  </tr>
+</table>

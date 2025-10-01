@@ -1,0 +1,11 @@
+<div *ngIf="auto; else noAuto">
+  <h2>{{ auto.marca }} {{ auto.modelo }}</h2>
+  <ul>
+    <li><strong>Año:</strong> {{ auto.anio }}</li>
+    <li><strong>Precio:</strong> ${{ auto.precio }}</li>
+  </ul>
+</div>
+
+<ng-template #noAuto>
+  <p>Auto no encontrado.</p>
+</ng-template>

@@ -1,0 +1,26 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ddd;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  .user-info {
+    font-size: 0.9rem;
+    color: #555;
+  }
+}

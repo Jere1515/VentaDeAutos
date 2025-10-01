@@ -1,0 +1,27 @@
+<div class="lista-autos-container">
+  <h2>Lista de Autos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Año</th>
+        <th>Precio (USD)</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let auto of autos">
+        <td>{{ auto.id }}</td>
+        <td>{{ auto.marca }}</td>
+        <td>{{ auto.modelo }}</td>
+        <td>{{ auto.anio }}</td>
+        <td>{{ auto.precio | currency:'USD':'symbol' }}</td>
+        <td>
+          <a [routerLink]="['/autos', auto.id]">Ver Detalle</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,13 @@
+<h2>Nuevo Cliente</h2>
+<form (ngSubmit)="guardarCliente()">
+  <label>Nombre:</label>
+  <input [(ngModel)]="nombre" name="nombre" required />
+
+  <label>Correo:</label>
+  <input [(ngModel)]="correo" name="correo" type="email" required />
+
+  <label>Teléfono:</label>
+  <input [(ngModel)]="telefono" name="telefono" required />
+
+  <button type="submit">Guardar Cliente</button>
+</form>
