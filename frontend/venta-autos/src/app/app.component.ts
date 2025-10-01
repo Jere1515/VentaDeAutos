@@ -19,5 +19,5 @@ import { FooterComponent } from './core/footer/footer.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'venta-autos';
+  title = 'Venta de Autos 🚗';
 }

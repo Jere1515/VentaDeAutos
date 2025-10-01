@@ -1,26 +1,67 @@
-.app-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.header {
+  margin: 20px auto; // 🔹 separa de los bordes de la página
+  max-width: 1200px; // 🔹 ancho máximo centrado
   padding: 1rem 2rem;
-  background-color: #f7f7f7;
-  border-bottom: 1px solid #ddd;
 
-  .logo {
+  /* 🔥 Fondo animado azul tipo agua */
+  background: linear-gradient(-45deg, #0f172a, #1e3a8a, #1e40af, #0f172a);
+  background-size: 400% 400%;
+  animation: agua 12s ease infinite;
+
+  color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7),
+              0 0 30px rgba(255, 255, 255, 0.5),
+              0 0 45px rgba(255, 255, 255, 0.3);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .branding {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    font-size: 1.25rem;
+    gap: 10px;
 
-    img {
-      height: 40px;
+    .logo {
+      height: 90px;
       width: auto;
+    }
+
+    .title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
   }
 
-  .user-info {
-    font-size: 0.9rem;
-    color: #555;
+  .contact {
+    display: flex;
+    gap: 20px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      .material-icons {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+/* 🌊 Animación tipo agua */
+@keyframes agua {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

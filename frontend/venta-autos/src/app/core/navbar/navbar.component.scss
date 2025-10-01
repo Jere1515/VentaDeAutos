@@ -1,21 +1,36 @@
-.app-navbar {
-  display: flex;
-  gap: 2rem;
-  background-color: #eee;
-  padding: 0.5rem 2rem;
+.navbar {
+  background: #1f2937; // gris oscuro
+  padding: 0.75rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 
-  a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.2s;
+  .container {
+    display: flex;
+    justify-content: center;
+  }
 
-    &.active {
-      color: #007bff;
-    }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 
-    &:hover {
-      color: #0056b3;
+    li a {
+      color: #f3f4f6; // gris claro
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s ease, border-bottom 0.3s ease;
+
+      &:hover {
+        color: #ef4444; // rojo (coherente con el header)
+      }
+
+      &.active {
+        border-bottom: 2px solid #ef4444;
+        padding-bottom: 0.25rem;
+        color: #ef4444;
+      }
     }
   }
 }
